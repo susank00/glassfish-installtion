@@ -1,0 +1,37 @@
+JAVA and JDK setup
+
+Currently our system supports jdk version 1.8 only as to be compatible for mfin and hrm to run.
+
+First install java 1.7 in your system by locating 1.7file in the file server.
+
+Steps to install 1.7 
+    1. Install java 1.8 from following commands steps
+1. sudo apt install openjdk-8-jdk
+2. java -version
+3.  In your output you will see:
+
+Output
+openjdk version "1.8.0_312"
+OpenJDK Runtime Environment (build 1.8.0_312-8u312-b07-0ubuntu1~20.04-b07)
+OpenJDK 64-Bit Server VM (build 25.312-b07, mixed mode)
+
+    2. Glassfish setup in your local area.
+3.1 Copy the glassfish setup in your home directory
+3.2 now run command	
+ $	cd /home/glassfish 3/glassfish/bin
+ $         sudo bash asadmin start-domain domain1
+If errors occurs such that 1.7 jdk is not install or found reinstall it
+ 
+Then head over to following path
+ Cd /home/glassfish3/glassfish/config/ 
+Edit the asenv.conf and add following lines at last
+This path and your 1.7jdk path should be the same.
+AS_JAVA=/usr/lib/java/jdk1.7.0_80/jre..
+AS_JAVA=/usr/lib/java/jdk1.7.0_80/
+
+After that again run the command to start domain
+
+
+Then go to Mozilla firefox and paste this link:-
+
+https://localhost:4848/common/index.jsf
