@@ -35,3 +35,6 @@ After that again run the command to start domain
 Then go to Mozilla firefox and paste this link:-
 
 https://localhost:4848/common/index.jsf
+
+sudo bash asadmin stop-domain domain1
+
